@@ -5,13 +5,15 @@ import {
   NotFoundException as NotFoundHttpException,
   Param,
 } from '@nestjs/common';
-import { routesV1 } from '@config/app.routes';
 import { CommandBus } from '@nestjs/cqrs';
-import { DeleteUserCommand } from './delete-user.service';
-import { match, Result } from 'oxide.ts';
-import { NotFoundException } from '@libs/exceptions';
 import { ApiOperation, ApiResponse } from '@nestjs/swagger';
+import { match, Result } from 'oxide.ts';
+
+import { routesV1 } from '@config/app.routes';
+import { NotFoundException } from '@libs/exceptions';
 import { ApiErrorResponse } from '@src/libs/api/api-error.response';
+
+import { DeleteUserCommand } from './delete-user.service';
 
 @Controller(routesV1.version)
 export class DeleteUserHttpController {

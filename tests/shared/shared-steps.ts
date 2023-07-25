@@ -1,7 +1,8 @@
+import { DefineStepFunction } from 'jest-cucumber';
+
 import { ApiErrorResponse } from '@src/libs/api/api-error.response';
 import { TestContext } from '@tests/test-utils/TestContext';
 import { CreateUserTestContext } from '@tests/user/user-shared-steps';
-import { DefineStepFunction } from 'jest-cucumber';
 
 /**
  * Test steps that can be shared between all tests

@@ -1,16 +1,18 @@
+import { v4 } from 'uuid';
+
 import { AggregateRoot, AggregateID } from '@libs/ddd';
+
+import { UserAddressUpdatedDomainEvent } from './events/user-address-updated.domain-event';
 import { UserCreatedDomainEvent } from './events/user-created.domain-event';
-import { Address, AddressProps } from './value-objects/address.value-object';
+import { UserDeletedDomainEvent } from './events/user-deleted.domain-event';
+import { UserRoleChangedDomainEvent } from './events/user-role-changed.domain-event';
 import {
   CreateUserProps,
   UpdateUserAddressProps,
   UserProps,
   UserRoles,
 } from './user.types';
-import { v4 } from 'uuid';
-import { UserDeletedDomainEvent } from './events/user-deleted.domain-event';
-import { UserRoleChangedDomainEvent } from './events/user-role-changed.domain-event';
-import { UserAddressUpdatedDomainEvent } from './events/user-address-updated.domain-event';
+import { Address, AddressProps } from './value-objects/address.value-object';
 
 export class UserEntity extends AggregateRoot<UserProps> {
   protected readonly _id: AggregateID;

@@ -1,8 +1,9 @@
+import { DefineStepFunction } from 'jest-cucumber';
+
 import { Mutable } from '@src/libs/types';
 import { CreateUserRequestDto } from '@src/modules/user/commands/create-user/create-user.request.dto';
-import { DefineStepFunction } from 'jest-cucumber';
-import { TestContext } from 'tests/test-utils/TestContext';
 import { ApiClient } from '@tests/test-utils/ApiClient';
+import { TestContext } from 'tests/test-utils/TestContext';
 
 /**
  * Test steps that are shared between multiple user tests

@@ -1,16 +1,18 @@
 import { defineFeature, loadFeature } from 'jest-cucumber';
-import { getConnectionPool } from '../../setup/jestSetupAfterEnv';
-import { UserResponseDto } from '@modules/user/dtos/user.response.dto';
 import { DatabasePool, sql } from 'slonik';
-import { TestContext } from '@tests/test-utils/TestContext';
+
+import { UserResponseDto } from '@modules/user/dtos/user.response.dto';
 import { IdResponse } from '@src/libs/api/id.response.dto';
+import { iReceiveAnErrorWithStatusCode } from '@tests/shared/shared-steps';
+import { ApiClient } from '@tests/test-utils/ApiClient';
+import { TestContext } from '@tests/test-utils/TestContext';
+
+import { getConnectionPool } from '../../setup/jestSetupAfterEnv';
 import {
   CreateUserTestContext,
   givenUserProfileData,
   iSendARequestToCreateAUser,
 } from '../user-shared-steps';
-import { ApiClient } from '@tests/test-utils/ApiClient';
-import { iReceiveAnErrorWithStatusCode } from '@tests/shared/shared-steps';
 
 const feature = loadFeature('tests/user/create-user/create-user.feature');
 

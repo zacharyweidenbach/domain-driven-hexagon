@@ -1,8 +1,10 @@
-import { NotFoundException } from '@libs/exceptions';
-import { UserRepositoryPort } from '@modules/user/database/user.repository.port';
 import { Inject } from '@nestjs/common';
 import { CommandHandler } from '@nestjs/cqrs';
 import { Err, Ok, Result } from 'oxide.ts';
+
+import { NotFoundException } from '@libs/exceptions';
+import { UserRepositoryPort } from '@modules/user/database/user.repository.port';
+
 import { USER_REPOSITORY } from '../../user.di-tokens';
 
 export class DeleteUserCommand {

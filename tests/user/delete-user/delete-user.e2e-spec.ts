@@ -1,15 +1,17 @@
-import { UserResponseDto } from '@modules/user/dtos/user.response.dto';
-import { IdResponse } from '@src/libs/api/id.response.dto';
 import { defineFeature, loadFeature } from 'jest-cucumber';
 import { DatabasePool, sql } from 'slonik';
+
+import { UserResponseDto } from '@modules/user/dtos/user.response.dto';
+import { IdResponse } from '@src/libs/api/id.response.dto';
+import { ApiClient } from '@tests/test-utils/ApiClient';
 import { TestContext } from '@tests/test-utils/TestContext';
+
 import { getConnectionPool } from '../../setup/jestSetupAfterEnv';
 import {
   CreateUserTestContext,
   givenUserProfileData,
   iSendARequestToCreateAUser,
 } from '../user-shared-steps';
-import { ApiClient } from '@tests/test-utils/ApiClient';
 
 const feature = loadFeature('tests/user/delete-user/delete-user.feature');
 

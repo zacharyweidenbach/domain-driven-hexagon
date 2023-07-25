@@ -1,7 +1,9 @@
-import { AggregateID, AggregateRoot } from '@libs/ddd';
-import { ArgumentOutOfRangeException } from '@libs/exceptions';
 import { Err, Ok, Result } from 'oxide.ts';
 import { v4 } from 'uuid';
+
+import { AggregateID, AggregateRoot } from '@libs/ddd';
+import { ArgumentOutOfRangeException } from '@libs/exceptions';
+
 import { WalletCreatedDomainEvent } from './events/wallet-created.domain-event';
 import { WalletNotEnoughBalanceError } from './wallet.errors';
 

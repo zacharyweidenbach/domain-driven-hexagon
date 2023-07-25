@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 
 import { SlonikMigrator } from '@slonik/migrator';
-import { createPool } from 'slonik';
 import * as dotenv from 'dotenv';
+import { createPool } from 'slonik';
+
 import * as path from 'path';
 
 // use .env or .env.test depending on NODE_ENV variable

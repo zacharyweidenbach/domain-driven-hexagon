@@ -1,18 +1,19 @@
 import { Logger, Module, Provider } from '@nestjs/common';
-import { UserRepository } from './database/user.repository';
-import { CreateUserHttpController } from './commands/create-user/create-user.http.controller';
-import { DeleteUserHttpController } from './commands/delete-user/delete-user.http-controller';
-import { CreateUserCliController } from './commands/create-user/create-user.cli.controller';
-import { FindUsersHttpController } from './queries/find-users/find-users.http.controller';
-import { CreateUserMessageController } from './commands/create-user/create-user.message.controller';
-import { CreateUserGraphqlResolver } from './commands/create-user/graphql-example/create-user.graphql-resolver';
-import { CreateUserService } from './commands/create-user/create-user.service';
-import { DeleteUserService } from './commands/delete-user/delete-user.service';
-import { FindUsersQueryHandler } from './queries/find-users/find-users.query-handler';
-import { UserMapper } from './user.mapper';
 import { CqrsModule } from '@nestjs/cqrs';
-import { USER_REPOSITORY } from './user.di-tokens';
+
+import { CreateUserCliController } from './commands/create-user/create-user.cli.controller';
+import { CreateUserHttpController } from './commands/create-user/create-user.http.controller';
+import { CreateUserMessageController } from './commands/create-user/create-user.message.controller';
+import { CreateUserService } from './commands/create-user/create-user.service';
+import { CreateUserGraphqlResolver } from './commands/create-user/graphql-example/create-user.graphql-resolver';
+import { DeleteUserHttpController } from './commands/delete-user/delete-user.http-controller';
+import { DeleteUserService } from './commands/delete-user/delete-user.service';
+import { UserRepository } from './database/user.repository';
 import { FindUsersGraphqlResolver } from './queries/find-users/find-users.graphql-resolver';
+import { FindUsersHttpController } from './queries/find-users/find-users.http.controller';
+import { FindUsersQueryHandler } from './queries/find-users/find-users.query-handler';
+import { USER_REPOSITORY } from './user.di-tokens';
+import { UserMapper } from './user.mapper';
 
 const httpControllers = [
   CreateUserHttpController,

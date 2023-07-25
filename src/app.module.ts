@@ -1,16 +1,18 @@
+import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { Module } from '@nestjs/common';
+import { APP_INTERCEPTOR } from '@nestjs/core';
 import { CqrsModule } from '@nestjs/cqrs';
-import { SlonikModule } from 'nestjs-slonik';
 import { EventEmitterModule } from '@nestjs/event-emitter';
+import { GraphQLModule } from '@nestjs/graphql';
+import { RequestContextModule } from 'nestjs-request-context';
+import { SlonikModule } from 'nestjs-slonik';
+
+import { ExceptionInterceptor } from '@libs/application/interceptors/exception.interceptor';
 import { UserModule } from '@modules/user/user.module';
 import { WalletModule } from '@modules/wallet/wallet.module';
-import { RequestContextModule } from 'nestjs-request-context';
-import { APP_INTERCEPTOR } from '@nestjs/core';
-import { ContextInterceptor } from './libs/application/context/ContextInterceptor';
-import { ExceptionInterceptor } from '@libs/application/interceptors/exception.interceptor';
+
 import { postgresConnectionUri } from './configs/database.config';
-import { GraphQLModule } from '@nestjs/graphql';
-import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
+import { ContextInterceptor } from './libs/application/context/ContextInterceptor';
 
 const interceptors = [
   {

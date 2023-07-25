@@ -1,9 +1,11 @@
-import { Mapper } from '@libs/ddd';
-import { UserModel, userSchema } from './database/user.repository';
-import { Address } from './domain/value-objects/address.value-object';
-import { UserEntity } from './domain/user.entity';
-import { UserResponseDto } from './dtos/user.response.dto';
 import { Injectable } from '@nestjs/common';
+
+import { Mapper } from '@libs/ddd';
+
+import { UserModel, userSchema } from './database/user.repository';
+import { UserEntity } from './domain/user.entity';
+import { Address } from './domain/value-objects/address.value-object';
+import { UserResponseDto } from './dtos/user.response.dto';
 
 /**
  * Mapper constructs objects that are used in different layers:

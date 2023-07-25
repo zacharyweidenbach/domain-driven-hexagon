@@ -1,8 +1,10 @@
+import { Inject, Injectable } from '@nestjs/common';
+import { OnEvent } from '@nestjs/event-emitter';
+
 import { UserCreatedDomainEvent } from '@modules/user/domain/events/user-created.domain-event';
 import { WalletRepositoryPort } from '@modules/wallet/database/wallet.repository.port';
+
 import { WalletEntity } from '../../domain/wallet.entity';
-import { OnEvent } from '@nestjs/event-emitter';
-import { Inject, Injectable } from '@nestjs/common';
 import { WALLET_REPOSITORY } from '../../wallet.di-tokens';
 
 @Injectable()

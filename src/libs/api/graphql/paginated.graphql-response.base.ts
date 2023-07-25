@@ -1,5 +1,5 @@
-import { Field, ObjectType, Int } from '@nestjs/graphql';
 import { Type } from '@nestjs/common';
+import { Field, ObjectType, Int } from '@nestjs/graphql';
 
 export interface IPaginatedType<T> {
   data: T[];

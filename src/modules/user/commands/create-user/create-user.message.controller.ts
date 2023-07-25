@@ -1,9 +1,11 @@
 import { Controller } from '@nestjs/common';
-import { MessagePattern } from '@nestjs/microservices';
 import { CommandBus } from '@nestjs/cqrs';
+import { MessagePattern } from '@nestjs/microservices';
+
+import { IdResponse } from '@libs/api/id.response.dto';
+
 import { CreateUserCommand } from './create-user.command';
 import { CreateUserRequestDto } from './create-user.request.dto';
-import { IdResponse } from '@libs/api/id.response.dto';
 
 @Controller()
 export class CreateUserMessageController {

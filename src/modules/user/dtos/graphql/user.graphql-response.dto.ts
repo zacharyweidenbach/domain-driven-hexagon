@@ -1,5 +1,6 @@
-import { ResponseBase } from '@libs/api/response.base';
 import { Field, ObjectType } from '@nestjs/graphql';
+
+import { ResponseBase } from '@libs/api/response.base';
 
 @ObjectType()
 export class UserGraphqlResponseDto extends ResponseBase {

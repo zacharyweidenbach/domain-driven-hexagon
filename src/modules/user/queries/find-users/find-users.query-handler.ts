@@ -1,9 +1,11 @@
 import { IQueryHandler, QueryHandler } from '@nestjs/cqrs';
+import { InjectPool } from 'nestjs-slonik';
 import { Ok, Result } from 'oxide.ts';
+import { DatabasePool, sql } from 'slonik';
+
 import { PaginatedParams, PaginatedQueryBase } from '@libs/ddd/query.base';
 import { Paginated } from '@src/libs/ddd';
-import { InjectPool } from 'nestjs-slonik';
-import { DatabasePool, sql } from 'slonik';
+
 import { UserModel, userSchema } from '../../database/user.repository';
 
 export class FindUsersQuery extends PaginatedQueryBase {

@@ -1,8 +1,3 @@
-import { RequestContextService } from '@libs/application/context/AppRequestContext';
-import { AggregateRoot, PaginatedQueryParams, Paginated } from '@libs/ddd';
-import { Mapper } from '@libs/ddd';
-import { RepositoryPort } from '@libs/ddd';
-import { ConflictException } from '@libs/exceptions';
 import { EventEmitter2 } from '@nestjs/event-emitter';
 import { None, Option, Some } from 'oxide.ts';
 import {
@@ -18,6 +13,13 @@ import {
   UniqueIntegrityConstraintViolationError,
 } from 'slonik';
 import { ZodTypeAny, TypeOf, ZodObject } from 'zod';
+
+import { RequestContextService } from '@libs/application/context/AppRequestContext';
+import { AggregateRoot, PaginatedQueryParams, Paginated } from '@libs/ddd';
+import { Mapper } from '@libs/ddd';
+import { RepositoryPort } from '@libs/ddd';
+import { ConflictException } from '@libs/exceptions';
+
 import { LoggerPort } from '../ports/logger.port';
 import { ObjectLiteral } from '../types';
 

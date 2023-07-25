@@ -1,7 +1,9 @@
+import { v4 } from 'uuid';
+
+import { RequestContextService } from '@libs/application/context/AppRequestContext';
+
 import { ArgumentNotProvidedException } from '../exceptions';
 import { Guard } from '../guard';
-import { v4 } from 'uuid';
-import { RequestContextService } from '@libs/application/context/AppRequestContext';
 
 type DomainEventMetadata = {
   /** Timestamp when this domain event occurred */

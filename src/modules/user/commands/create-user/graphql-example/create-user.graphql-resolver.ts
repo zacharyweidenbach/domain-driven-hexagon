@@ -1,11 +1,14 @@
-import { Args, Mutation, Resolver } from '@nestjs/graphql';
 import { CommandBus } from '@nestjs/cqrs';
-import { CreateUserCommand } from '../create-user.command';
-import { CreateUserGqlRequestDto } from './dtos/create-user.gql-request.dto';
-import { IdGqlResponse } from './dtos/id.gql-response.dto';
+import { Args, Mutation, Resolver } from '@nestjs/graphql';
+import { Result } from 'oxide.ts';
+
 import { AggregateID } from '@src/libs/ddd';
 import { UserAlreadyExistsError } from '@src/modules/user/domain/user.errors';
-import { Result } from 'oxide.ts';
+
+import { CreateUserGqlRequestDto } from './dtos/create-user.gql-request.dto';
+import { IdGqlResponse } from './dtos/id.gql-response.dto';
+
+import { CreateUserCommand } from '../create-user.command';
 
 // If you are Using GraphQL you'll need a Resolver instead of a Controller
 @Resolver()

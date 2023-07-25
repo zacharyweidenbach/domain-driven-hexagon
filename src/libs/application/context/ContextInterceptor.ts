@@ -4,8 +4,9 @@ import {
   ExecutionContext,
   CallHandler,
 } from '@nestjs/common';
-import { Observable, tap } from 'rxjs';
 import { nanoid } from 'nanoid';
+import { Observable, tap } from 'rxjs';
+
 import { RequestContextService } from './AppRequestContext';
 
 @Injectable()

@@ -1,3 +1,5 @@
+import { ExceptionBase } from './exception.base';
+
 import {
   ARGUMENT_INVALID,
   ARGUMENT_NOT_PROVIDED,
@@ -6,7 +8,6 @@ import {
   INTERNAL_SERVER_ERROR,
   NOT_FOUND,
 } from '.';
-import { ExceptionBase } from './exception.base';
 
 /**
  * Used to indicate that an incorrect argument was provided to a method/function/class constructor

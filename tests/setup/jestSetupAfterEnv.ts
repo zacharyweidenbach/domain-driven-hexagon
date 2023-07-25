@@ -1,10 +1,11 @@
-import { Test, TestingModuleBuilder, TestingModule } from '@nestjs/testing';
-import { AppModule } from '@src/app.module';
+import { ValidationPipe } from '@nestjs/common';
 import { NestExpressApplication } from '@nestjs/platform-express';
+import { Test, TestingModuleBuilder, TestingModule } from '@nestjs/testing';
 import { createPool, DatabasePool } from 'slonik';
 import * as request from 'supertest';
+
+import { AppModule } from '@src/app.module';
 import { postgresConnectionUri } from '@src/configs/database.config';
-import { ValidationPipe } from '@nestjs/common';
 
 // Setting up test server and utilities
 

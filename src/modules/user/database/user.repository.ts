@@ -1,13 +1,16 @@
-import { InjectPool } from 'nestjs-slonik';
-import { DatabasePool, sql } from 'slonik';
-import { UserRepositoryPort } from './user.repository.port';
-import { z } from 'zod';
-import { UserMapper } from '../user.mapper';
-import { UserRoles } from '../domain/user.types';
-import { UserEntity } from '../domain/user.entity';
-import { SqlRepositoryBase } from '@src/libs/db/sql-repository.base';
 import { Injectable, Logger } from '@nestjs/common';
 import { EventEmitter2 } from '@nestjs/event-emitter';
+import { InjectPool } from 'nestjs-slonik';
+import { DatabasePool, sql } from 'slonik';
+import { z } from 'zod';
+
+import { SqlRepositoryBase } from '@src/libs/db/sql-repository.base';
+
+import { UserRepositoryPort } from './user.repository.port';
+
+import { UserEntity } from '../domain/user.entity';
+import { UserRoles } from '../domain/user.types';
+import { UserMapper } from '../user.mapper';
 
 /**
  * Runtime validation of user object for extra safety (in case database schema changes).
